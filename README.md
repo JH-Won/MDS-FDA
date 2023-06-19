@@ -28,7 +28,7 @@ with a centering matrix $C,$ and $M \in\mathbb{R}^{N \times N}$ is a partial mat
 
 $$\sum_{i=1}^c N_i  K^{(i)} K^{{(i)}\top},$$ 
 
-where $K^{(i)} \in\mathbb{R}^{N \times 1}$ with $$K^{(i)}_l = \sum_k^{N_j} \mathbf{x}_l^\top \mathbf{x}_k.$$ $x_l$ is a vector representation of $s_l$.
+where $K^{(i)} \in\mathbb{R}^{N \times 1}$ with $$K^{(i)}_l = \sum_k^{N_j} \mathbf{x}_l^\top \mathbf{x}_k.$$ $x_l$ is a vector representation of $s_l$, so the inner product $\mathbf{x}_l^\top \mathbf{x}_k$ represents a similarity between $s_l$ and $s_k$.
 
 
 ### The closed-form solution:
@@ -45,4 +45,20 @@ With the obtained optimal projection matrix $V^*\in\mathbb{R}^{N \times k}$, we 
 $$U = GV^* = -\frac{1}{2} C D^2 C V^*.$$
 
 
-## How to run
+## Code
+
+The MDS-FDA algorithm is implemented as the class `MDSFDA` in the `MDSFDA.py`. The class `MDSFDA` is instantiated with the dimensionality of embedding $U$: `n_components` and the regularization `robustness_offset` for the gram matrix $G$ (that is, $G \leftarrow G + \gamma I$):
+```python
+mdsfda = MDSFDA(n_components=2, robustness_offset=1e-6)
+```
+Then, we fit the instance using $N \times N$ parwise distance matrix $D$ and the label vector $\mathbf{y}$, and obtain the embedding using the following codes:
+```python
+mdsfda.fit(D, y)
+U = mdsfda.embedding_
+```
+The shape of the embedding $U$ will be $N \times k, k \le c-1$ (in the above example, $k=2$).
+
+
+#### Notebook tutorial
+
+You can run the code in the `Example_protein_sequences.ipynb`. This example use the protein sequence to show the MDS-FDA embedding. Contact jonghyun1@hanyang.ac.kr if you have any inquiries, quetions, or suggestions.
