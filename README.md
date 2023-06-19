@@ -47,7 +47,7 @@ $$U = GV^* = -\frac{1}{2} C D^2 C V^*.$$
 
 ## Code
 
-The MDS-FDA algorithm is implemented as the class `MDSFDA` in the `MDSFDA.py`. The class `MDSFDA` is instantiated with the dimensionality of embedding $U$: `n_components` and the regularization `robustness_offset` for the gram matrix $G$ (that is, $G \leftarrow G + \gamma I$):
+The MDS-FDA algorithm is implemented in the class `MDSFDA` in the `MDSFDA.py`. The class `MDSFDA` is instantiated with the dimensionality of embedding $U$: `n_components` and the regularization `robustness_offset` for the gram matrix $G$ (that is, $G \leftarrow G + \gamma I$):
 ```python
 mdsfda = MDSFDA(n_components=2, robustness_offset=1e-6)
 ```
