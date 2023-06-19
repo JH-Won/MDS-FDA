@@ -1,6 +1,6 @@
 # FDA-MDS: Extending Fisher-Discriminant Analysis for Non-vector Data
 
-This repository provides the code of MDS-FDA, an algorithm for obtaining low-dimensional embedding of non-vector, labled data. The algorithm is a non-vector version of Fisher-Discriminant Analaysis (FDA), exploiting the information from Multidimensional scaling (MDS). For a detailed description, take a look at [the short article of MDS-FDA]().  
+This repository provides the code of MDS-FDA, an algorithm for obtaining low-dimensional embedding of non-vector, labled data. The algorithm is a non-vector version of Fisher-Discriminant Analaysis (FDA), exploiting the information from Multidimensional scaling (MDS). For a detailed description, take a look at [the short article of MDS-FDA](https://github.com/JH-Won/MDS-FDA/blob/main/MDS-FDA.pdf).  
 
 ## Problem
 
@@ -32,7 +32,7 @@ where $K^{(i)} \in\mathbb{R}^{N \times 1}$ with $$K^{(i)}_l = \sum_k^{N_j} \math
 
 
 ### The closed-form solution:
-The MDS-FDA has the closed-form solution obtained by solving the following eigenvalue problem (for the derivation, see [the article of MDS-FDA]()):
+The MDS-FDA has the closed-form solution obtained by solving the following eigenvalue problem (for the derivation, see [the article of MDS-FDA](https://github.com/JH-Won/MDS-FDA/blob/main/MDS-FDA.pdf)):
 
 $$ (G^2)^{-1} M V = V \Lambda,$$
 
