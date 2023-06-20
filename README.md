@@ -63,7 +63,7 @@ The shape of the embedding $U$ will be $N \times k, k \le c-1$ (in the above exa
 
 #### Notebook tutorial
 
-You can run the code in the `Example_protein_sequences.ipynb`. This example use the protein sequence to show the MDS-FDA embedding (the result of embedding is shown below). 
+You can run the code in the `Example_protein_sequences.ipynb`. This example use the protein sequence to show the MDS-FDA embedding (the result of embedding is shown below, see the class-separation information in the space). 
 
 ![Example result of MDS-FDA](https://github.com/JH-Won/MDS-FDA/blob/main/example_embedding.png) 
 
